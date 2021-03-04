@@ -1,0 +1,24 @@
+
+  {# default to green bordered secttion, with green bg button (light text ) #}
+  {% set theme = 'frame' %} 
+  {% set themeColor = 'green' %}
+  {% set buttonStyle = 'colored-bg' %}
+  {% set buttonColor = 'green' %}
+  
+  {# SET VARS TO RENDER SECTION BASED ON SELECTED THEME #}
+
+
+  <section class="[ magSection ] [ wrapper ]" data-theme="frame" data-theme-color="green">
+    <div class="[ magSection__image ]">
+      {% block sectionImage %}
+        <h1>Missing Image</h1>
+      {% endblock %}
+    </div>
+    <div class="[ magSection__content ] [ pannel frame-thick flow ]">
+
+      {% block sectionCopy %}
+        <h1>Missing Copy</h1>
+      {% endblock %}
+      
+    </div>
+  </section>

@@ -1,0 +1,9 @@
+[build]
+  command = "npm run production"
+  publish = "dist"
+
+[[redirects]]
+  from = "https://cac-web.netlify.app/*"
+  to = "https://www.canadianadventurecamp.com/:splat"
+  status = 301
+  force = true
