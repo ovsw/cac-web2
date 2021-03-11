@@ -28,8 +28,17 @@
   }
 
   &__middle-column {
-    padding-top: get-size('700');
-    margin-right: auto;
+    
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    @include media-query('lg') {
+      display: block;
+      margin-left: 0;
+      margin-right: auto;
+      padding-top: get-size('700');
+    }
    
   }
 
@@ -49,7 +58,10 @@
     flex-shrink: 0;
     
     img {
-      height: 108px;
+      height: 60px;
+      @include media-query('md') {
+        height: 100px;
+      }
     }
   }
 
