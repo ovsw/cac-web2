@@ -146,7 +146,7 @@ $main-menu-colors: (
       0 2px 18px 3px rgba(get-color('secondary'), 0.1);
       display: flex;
       // width: 43rem;
-      border-top: 3px solid black;
+      border-top: 3px solid get-color('primary');
 
      
 

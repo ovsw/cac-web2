@@ -3,16 +3,36 @@
 {% block sectionImage %}
 
 
+  {% if section.image %}
 
-  <img src="{% croppedUrlFor section.image, '800', '700' %}" 
-  srcset="{% croppedUrlFor section.image, '400', '300' %} 400w,
-  {% croppedUrlFor section.image, '928', '300' %}  928w,
-  {% croppedUrlFor section.image, '1000', '600' %}  1000w,
-  {% croppedUrlFor section.image, '1600', '800' %}  1600w,
-  {% croppedUrlFor section.image, '2500', '1600' %}  2500w"
-  {# sizes="(min-width: 800px) 928px, 100vw" #}
-  alt="{{ section.image.alt}}"  />
+    {% if section.video %}
+      <button
+      class="glightbox" 
+      data-href="https://www.youtube.com/watch?v=Ydh9_nK87c4"
+      data-draggable="false"
+      data-videos-width="100vw"
+      data-type="video"
+      >
+      <span class="magSection__playIcon">
+        {% include "partials/svg/icon-play.svg" %}
+        <span class="visually-hidden">play</span>
+      </span>
+    {% endif %}
+    
+    <img src="{% croppedUrlFor section.image, '800', '700' %}" 
+    srcset="{% croppedUrlFor section.image, '400', '300' %} 400w,
+    {% croppedUrlFor section.image, '928', '300' %}  928w,
+    {% croppedUrlFor section.image, '1000', '600' %}  1000w,
+    {% croppedUrlFor section.image, '1600', '800' %}  1600w,
+    {% croppedUrlFor section.image, '2500', '1600' %}  2500w"
+    {# sizes="(min-width: 800px) 928px, 100vw" #}
+    alt="{{ section.image.alt}}"  />
 
+
+    {% if section.video %}
+      </button>
+    {% endif %}
+  {% endif %}
 
 {% endblock %}
 
@@ -37,7 +57,7 @@
       {# BUTTONS #}
       {% if section.button1.text %}
       <div class="magSection__buttonWrapper">      
-          <a href="{{section.button1.url}}" class="[ button ] [ button--{{buttonStyle}} button--color-{{buttonColor}} ]">{{section.button1.text}}</a>
+          <a href="/{{section.button1.url}}/" class="[ button button--solid ]">{{section.button1.text}}</a>
       </div>
       {% endif %}
 {% endblock %}

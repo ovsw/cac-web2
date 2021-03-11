@@ -1,7 +1,8 @@
 {% extends "sections/common/centered-section.html" %}
 
 {% block content %}
- 
+ <script>console.log({{section | dump | safe}})</script>
+
   <h2 class="faqSection__heading">{{section.title}}</h2>
 
   <div class="faqsWrapper" x-data="{selected:null} ">

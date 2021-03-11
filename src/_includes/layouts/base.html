@@ -108,6 +108,8 @@
 
     {# General critical styles #}
     <style>{% include "css/critical.css" %}</style>
+    <link rel="stylesheet" media="print" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" onload="this.media='all'" />
+
 
     {# Add facility for pages to delare an array of critical styles #}
     {% if pageCriticalStyles %}
@@ -149,9 +151,9 @@
     {% include "partials/site-footer.html" %}
     
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-    {# <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" defer></script> #}
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" defer></script>
 
-    {# <script type="text/javascript">
+    <script type="text/javascript">
 
       window.onload = (event) => {
         console.log('page is fully loaded');
@@ -165,7 +167,7 @@
 
         const lightbox = GLightbox({ ...options });
       };
-    </script> #}
+    </script>
 
   </body>
 </html>
