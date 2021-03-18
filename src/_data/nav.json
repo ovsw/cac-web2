@@ -237,20 +237,6 @@
             "url": "/passes/season-pass/"
           }
         ]
-      },
-      {
-        "column": 3,
-        "name": "Tickets",
-        "children": [
-          {
-            "name": "Ride Tickets",
-            "url": "/ride-tickets/"
-          },
-          {
-          "name": "Park Rides",
-            "url": "/amusement-park-rides/"
-          }
-        ]
       }
     ]
   }
