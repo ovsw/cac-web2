@@ -10,14 +10,14 @@
     top:-2.3rem;
     left: 50%;
     transform: translateX(-100px);
-    width: 200px;
+    width: 180px;
     z-index: 900;
   }
 
   &__inner {}
 
   &__topbar {
-    background-color: get-color('light');
+    background-color: get-color('light-shade');
     padding: 0.5rem 0;
 
     
@@ -59,3 +59,28 @@
 }
 
 
+.alert {
+  background-color: get-color('primary-shade');
+  text-align: center;
+  padding: get-size('200');
+  color: #ffe000;
+
+  & p {
+    display: inline-block;
+    
+
+    & a {
+      text-decoration-color:#ffe000;
+    }
+  }
+
+  & button {
+    margin-left: auto;
+    background-color: get-color('primary');
+    border: none;
+    color: get-color('light');
+    display: inline-block;
+    margin-left: get-size('400');
+  }
+  
+}

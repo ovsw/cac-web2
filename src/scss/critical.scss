@@ -13,7 +13,7 @@
 }
 
 body {
-  background: get-color('light');
+  background: get-color('light-shade');
   color: get-color('dark');
   line-height: 1.5;
   font-size: get-size('500');
@@ -126,8 +126,3 @@ h1, h2 {
   top: 0.1em;
 }
 
-.alert {
-  background-color: #ffe000;
-  text-align: center;
-  padding: 0.25rem;
-}
