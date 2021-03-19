@@ -55,9 +55,11 @@
       </div>
 
       {# BUTTONS #}
-      {% if section.button1.text %}
+      {% if section.button1 %}
       <div class="magSection__buttonWrapper">      
-          <a href="/{{section.button1.url}}/" class="[ button button--solid ]">{{section.button1.text}}</a>
+         {% for button in section.button1 %}
+            <a href="/{{button.url}}/" class="[ button button--solid ]">{{button.text}}</a>
+         {% endfor %}
       </div>
       {% endif %}
 {% endblock %}

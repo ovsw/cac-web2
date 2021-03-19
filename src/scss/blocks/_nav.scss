@@ -48,7 +48,7 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       display: flex;
       justify-content: space-around;
       flex-direction: row;
-      border: 1px solid rgba($color: get-color('light-glare'), $alpha: 0.3);
+      border: 1px solid rgba($color: get-color('primary'), $alpha: 0.7);
       width: auto;
       margin: 0 auto!important;
     }
@@ -81,10 +81,10 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
         justify-content: space-between;
         align-items: center;
         position: relative;
-        color: get-color('light');
+        color: get-color('dark');
         padding: get-size('300');
         outline-offset: -0.25rem;
-        font-weight: 400;
+        font-weight: 600;
         text-transform: uppercase;
         
         svg {
@@ -94,8 +94,9 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
           transform: translateY(-2px);
         }
 
-        &:hover {
-          color: get-color('light-glare')!important;
+        &:hover, &:focus{
+          color: get-color('light')!important;
+          background-color: get-color('primary');
         }
         
         @media screen and (min-width: 960px) {
@@ -104,12 +105,11 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
 
         @include media-query('lg') {
           font-size: get-size('400');
-          padding: 0;
-          padding-top: 3px;
-          margin: get-size('400');
+          padding: 1rem;
+          
           width: auto;
           outline-offset: 0.25rem;
-          outline-color: white;
+          outline-color: get-color('primary');
           outline-width: 2px;
           &:hover {
             transform: scale(1);
@@ -125,7 +125,7 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
               height: 0;
               border-left: 20px solid transparent;
               border-right: 20px solid transparent;
-              border-bottom: 20px solid #fff;
+              border-bottom: 20px solid get-color('primary');
               position: absolute;
               top: calc(100% + 5px);
               left: 0;
@@ -146,17 +146,18 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
     position: relative;
     
     @include media-query('lg') {
-      padding: get-size('800');
-
+      padding-bottom: get-size('400');
+      padding-top: 0;
       position: absolute;
-      top: 112%;
+      top: calc(120% + 14px);
       left: 0;
       box-shadow: 
       0 2px 4px rgba(get-color('secondary'), 0.05),
       0 2px 18px 3px rgba(get-color('secondary'), 0.1);
       display: flex;
       // width: 43rem;
-      // border-top: 3px solid get-color('primary');
+      border-top: 3px solid get-color('primary');
+      z-index: 990;
 
       &.no-3 {
         left: -300px;
@@ -168,7 +169,7 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
 
       // spacing between columns
       > li + li {
-        padding-left: get-size('800');
+        // padding-left: get-size('400');
       }
     }
 
@@ -206,13 +207,15 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       text-transform: uppercase;
       font-size: get-size('300');
       padding: get-size('300') get-size('500');
+      
       border-top: $mobileMenuItemBorder;
       
       @include media-query('lg') {
         border-top: none;
-        padding: 0;
         padding: get-size('300');
-        border-left: 2px solid rgba($color: get-color('primary'), $alpha: 0.3);
+        padding-top: get-size('800');
+        padding-right: get-size('800');
+        border-left: 1px solid rgba($color: get-color('light'), $alpha: 1);
         color: get-color('light');
         background-color: get-color("primary-glare");
         margin-bottom: get-size('200');
@@ -226,6 +229,7 @@ $mobileMenuItemBorder: 1px solid rgba(get-color('secondary'), 0.3);
       border-top: $mobileMenuItemBorder;
       @include media-query('lg') {
         border-top: none;
+        padding: 0 1rem;
         // border-left: 2px solid rgba($color: get-color('primary'), $alpha: 0.3)   
       }
     }

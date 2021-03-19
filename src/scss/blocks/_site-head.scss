@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: get-color('primary');
+  background-color: get-color('light');
   z-index: 900;
 
   &__logo {
@@ -14,10 +14,13 @@
     z-index: 900;
   }
 
-  &__inner {}
+  &__inner {
+    position: relative;
+    z-index: 990;
+  }
 
   &__topbar {
-    background-color: get-color('light-shade');
+    background-color: get-color('primary');
     padding: 0.5rem 0;
 
     
@@ -34,7 +37,12 @@
     & a {
       text-transform: uppercase;
       font-weight: 600;
+      color: get-color('light');
       text-decoration: none;
+
+      &:focus {
+        outline-color: white;
+      }
     }
 
     & > div > div:first-child {
@@ -64,6 +72,8 @@
   text-align: center;
   padding: get-size('200');
   color: #ffe000;
+  position: relative;
+  z-index: 100;
 
   & p {
     display: inline-block;
@@ -71,6 +81,9 @@
 
     & a {
       text-decoration-color:#ffe000;
+      &:focus {
+        outline-color: white;
+      }
     }
   }
 
@@ -81,6 +94,9 @@
     color: get-color('light');
     display: inline-block;
     margin-left: get-size('400');
+    &:focus {
+      outline-color: white;
+    }
   }
   
 }

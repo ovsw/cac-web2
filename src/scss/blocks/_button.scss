@@ -59,8 +59,8 @@
       border-color: get-color('light-glare');
 
       &:hover {
-        background-color: get-color('primary');
-        color: get-color('light-glare');
+        background-color: get-color('light');
+        color: get-color('primary');
       }
     }
   }
