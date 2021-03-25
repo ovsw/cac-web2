@@ -72,6 +72,10 @@
             "url": "/dates-and-rates/"
           },
           {
+            "name": "Food & Sample Menu",
+            "url": "/food-and-sample-menu/"
+          },
+          {
             "name": "FAQs",
             "url": "/faqs/"
           },
@@ -108,11 +112,11 @@
           },
           {
           "name": "Memberships & Partnerships",
-            "url": "//"
+            "url": "/memeberships-partnerships/"
           },
           {
           "name": "Alumni",
-            "url": "//"
+            "url": "/alumni/"
           }
         ]
       },
@@ -156,8 +160,8 @@
             "url": "/transportation/"
           },
           {
-            "name": "International Campers",
-            "url": "/international-campers/"
+            "name": "International Travel",
+            "url": "/transportation/international-campers/"
           }
         ]
       },
@@ -185,15 +189,15 @@
         "children": [
           {
             "name": "Camp Pictures",
-            "url": "//"
+            "url": "/camp-pictures/"
           },
           {
             "name": "Camp Video",
-            "url": "//"
+            "url": "/camp-video/"
           },
           {
             "name": "Parent Login",
-            "url": "//"
+            "url": "/parent-log-in/"
           }
         ]
       }
@@ -208,7 +212,7 @@
         "children": [
           {
            "name": "Dates & Rates",
-            "url": "//"
+            "url": "/dates-and-rates/"
           },
           {
             "name": "FAQs",
@@ -216,7 +220,7 @@
           },
           {
           "name": "Contact Us",
-            "url": "/contact-us/"
+            "url": "/contact/"
           }
         ]
       },
