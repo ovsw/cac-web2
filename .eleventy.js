@@ -141,7 +141,7 @@ module.exports = config => {
 
     return (
       `<style>.page-header {background-image: url('${mobileUrl}')}
-      @media screen and (min-width: 1600px) {.page-header {background-image: url('${desktopUrl}')}}</style>`
+      @media screen and (min-width: 1200px) {.page-header {background-image: url('${desktopUrl}')}}</style>`
     )
   })
 

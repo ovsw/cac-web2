@@ -27,10 +27,10 @@
 {% block content %}
 
 
-{# <script>console.log({{sitePage.content | dump | safe}})</script> #}
+<script>console.log({{sitePage.content | dump | safe}})</script>
 
 <div>
-{{pageHeader(title=sitePage.content.title, image=sitePage.content.image)}}
+{{pageHeader(title=sitePage.content.title, image=sitePage.content.headerImage)}}
 </div>
 
 {{contentSections(sitePage.content.sections)}}
